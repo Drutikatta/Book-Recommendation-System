@@ -1,0 +1,263 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.book{
+    display: flex;
+    padding: 5%;
+    padding-top: 15vh;
+    padding-bottom: 0;
+    width: 87vw;
+}
+.book-rate{
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    height: 90%;
+}
+.book-img{
+    box-shadow: -4px -4px 14px grey, 4px 4px 14px grey;
+}
+.buy{
+    margin-top: 8%;
+    padding: 2% 0;
+    font-weight: bold;
+    font-size: 130%;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.add{
+    margin-top: 4%;
+    padding: 2% 10%;
+    font-weight: bold;
+    font-size: 115%;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.add span{
+    display: flex;
+    align-items: center;
+    height: 10px;
+    padding-top: 20px;
+    width: 20px;
+}
+
+.book-info{
+    margin-left: 3%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.book-data{
+    width: 100%;
+}
+.title{
+    font-size: 2.5rem;
+    margin-bottom: 1%;
+}
+.author{
+    font-size: 1.2rem;
+    color: grey;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin-top: 2%;
+    height: 6vh;
+    width: 20%;
+}
+.rating-img{
+    width: 13%;
+    height: 100%;
+}
+.genre{
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 2%;
+}
+.book-genre{
+    margin-left: 1%;
+    font-weight: normal;
+}
+.desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 0;
+    font-size: 2rem;
+}
+.desc h2{
+    width: 100%;
+    font-size: 1.6rem;
+}
+.description{
+    margin: 3% 0;
+    width: 80%;
+    height: auto;
+    font-size: 1rem;
+    background-color: rgba(248, 208, 208, 0.4);
+    box-shadow: -3px -3px 13px grey, 3px 3px 13px grey;
+    padding: 5%;
+}
+.review-session{
+    width: 96vw;
+    margin: 3% 0;
+}
+.review-head{
+    font-size: 2.8rem;
+    margin-bottom: 3%;
+}
+.review{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-review{
+    width: 55%;
+    padding: 2%;
+    border-radius: 90px;
+    border: 3px solid rgb(104, 102, 102);
+}
+.user-review-heading{
+    font-size: 1.7rem;
+    text-align: center;
+}
+.star{
+    width: 36%;
+    height: 60px;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+}
+.star span{
+    font-size: 25px;
+}
+.star .rating-img{
+    width: 15%;
+    height: 40px;
+}
+.addreview{
+    margin-top: 2%;
+    font-size: 1.3rem;
+    padding: 2%;
+    width: 85%;
+}
+.reviewbtn{
+    display: block;
+    font-size: 120%;
+    padding: 1%;
+    width: 20%;
+    margin-top: 2%;
+    border-radius: 50px;
+    margin-left: 35%;
+    cursor: pointer;
+}
+.other-user-review{
+    width: 32%;
+    height: 50vh;
+    padding: 1%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.other-review{
+    display: flex;
+    padding-bottom: 2%;
+    border-bottom:  4px solid rgb(212, 211, 211);
+    border-right:  4px solid rgb(212, 211, 211);
+    border-radius: 7px;
+    margin-bottom: 2%;
+}
+.profile{
+    border-right: 3px solid rgb(212, 211, 211);
+    border-radius: 5px;
+    padding-right: 7px;
+    width: 27%;
+    margin-right: 5px;
+}
+.username{
+    font-size: 20px;
+    margin-bottom: 5%;
+}
+.profile-img{
+    width: 70px;
+    height: 70px;
+    margin-left: 5%;
+    border-radius: 50%;
+}
+.person-review .star{
+    height: 35px;
+    margin-top: 0;
+}
+.similarbooks{
+    width: 89%;
+    padding: 3%;
+}
+.similarbookshead{
+    font-size: 2rem;
+}
+.books{
+    width: 100%;
+    height: 45vh;
+    margin-top: 2%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 2% 0;
+}
+.similar-book{
+    width: calc(100%/ 7.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    border: none;
+    box-shadow: -3px -3px 13px #464A68, 3px 3px 13px #C9ADA7;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin-right: 3%;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+.similar-book:last-child{
+    margin-right: 1%;
+}
+.similar-book:first-child{
+    margin-left: 1%;
+}
+.similar-book-img{
+    width: 80%;
+    height: 80%;
+    margin-bottom: 4%;
+}
+.similar-book-author{
+    margin-top: 3%;
+    font-size: 1.3em;
+    width: 90%;
+    overflow: hidden;    
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.reading{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    
+}
+.reading input{
+    display: none;
+}
+.reading label{
+    cursor: pointer;
+    text-align: center;
+    margin: 1% 0;
+}

@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+.navbar{
+    width: 99.8vw;
+    color: white;
+    height: 10vh;
+    display: flex;
+    position: fixed;
+    background: linear-gradient(213.3deg, #464A68 48.99%, #C9ADA7 96.27%);
+    z-index: 1;
+}
+.company-name{
+    width: 13%;
+    height: 100%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.logo{
+    width: 67px;
+    height: 53px;
+    margin-right: 7px;
+}
+.page-links, .pages,.page-links a,.company-name a{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 80%;
+    text-decoration: none;
+}
+.page-links li{
+    width: 20%;
+}
+.page-links, .page-links a{
+    font-size: 24px;
+    width: 75%;
+    justify-content: space-evenly;
+    color: white;
+}
+.page-links a{
+    width: 60%;
+    height: 55px;
+}
+#browse{
+    display: flex;
+    align-items: center;
+}
+#browse span{
+    display: flex;
+    align-items: center;
+    padding-top: 24px;
+    margin-left: -13px;
+}
+.company-name a{
+    color: white;
+    font-size: 27px;
+}
+.page-links{
+    width: 100%;
+}
+.search-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 20px;
+    height: 100%;
+    color: white;
+}
+#searchinput{
+    width: 50vw;
+    margin-right: 3%;
+}
+#searchbar{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+.search-login a{
+    width: 50px;
+}
+.category{
+    display: none;
+    width: 36%;
+    height: 40%;
+    position: fixed;
+    background-color: #C9ADA7;
+    left: 15%;
+    top: 8%;
+    padding: 1.5% 0 0 1%;
+    transition: all 0.5 ease-in-out;
+    z-index: 1;
+}
+.cat{
+    font-size: 2rem;
+    margin-bottom: 2%;
+    color: #464A68;
+}
+.book-genre{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 4%;
+    row-gap: 25%;
+    padding-left: 2%;
+}
+.books-cat{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+}
+i{
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.icon{
+    width: 50px;
+    height: 40px;   
+}
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 5px;
+}
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    top: 100px;
+    position: fixed;
+    top:11vh ;
+    right: 20px;
+    background-color: #f1f1f1;
+    width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 88%;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+  
+  .BIL{
+    color: #FDCA7E;
+    font-size: 1.5rem;
+}

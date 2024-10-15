@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block title %}BookisLife{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+{% endblock css %}
+
+{% block body %}
+
+<div>
+
+    <div class="genrebooks">
+        <h1 class="cen-title">Book Recommendation System</h1>
+        <div class="cen">
+            <a class="cen-book b1" href="/book/{{ recommendindex[2].iloc[2]['ISBN'] }}">
+                <img class="cen-img" src="{{ recommendindex[2].iloc[2]['Coverimg']}}" alt="Image">
+                <h2 class="title">{{ recommendindex[2].iloc[2]['Title']}}</h2>
+                <p class="author">{{ recommendindex[2].iloc[2]['Author']}}</p>
+                <p>Genre - <b>{{ recommendindex[2].iloc[2]['Genre']}}</b></p>
+            </a>
+            <a class="cen-book b2" href="/book/{{ recommendindex[2].iloc[1]['ISBN'] }}">
+                <img class="cen-img" src="{{ recommendindex[2].iloc[1]['Coverimg']}}" alt="Image">
+                <h2 class="title">{{ recommendindex[2].iloc[1]['Title']}}</h2>
+                <p class="author">{{ recommendindex[2].iloc[1]['Author']}}</p>
+                <p>Genre - <b>{{ recommendindex[2].iloc[1]['Genre']}}</b></p>
+            </a>
+            <a class="cen-book" href="/book/{{ recommendindex[2].iloc[0]['ISBN'] }}">
+                <img class="cen-img" src="{{ recommendindex[2].iloc[0]['Coverimg']}}" alt="Image">
+                <h2 class="title">{{ recommendindex[2].iloc[0]['Title']}}</h2>
+                <p class="author">{{ recommendindex[2].iloc[0]['Author']}}</p>
+                <p>Genre - <b>{{ recommendindex[2].iloc[0]['Genre']}}</b></p>
+            </a>
+            <a class="cen-book b3" href="/book/{{ recommendindex[2].iloc[3]['ISBN'] }}">
+                <img class="cen-img" src="{{ recommendindex[2].iloc[3]['Coverimg']}}" alt="Image">
+                <h2 class="title">{{ recommendindex[2].iloc[3]['Title']}}</h2>
+                <p class="author">{{ recommendindex[2].iloc[3]['Author']}}</p>
+                <p>Genre - <b>{{ recommendindex[2].iloc[3]['Genre']}}</b></p>
+            </a>
+            <a class="cen-book b4" href="/book/{{ recommendindex[2].iloc[4]['ISBN'] }}">
+                <img class="cen-img" src="{{ recommendindex[2].iloc[4]['Coverimg']}}" alt="Image">
+                <h2 class="title">{{ recommendindex[2].iloc[4]['Title']}}</h2>
+                <p class="author">{{ recommendindex[2].iloc[4]['Author']}}</p>
+                <p>Genre - <b>{{ recommendindex[2].iloc[4]['Genre']}}</b></p>
+            </a>
+        </div>
+    </div>
+
+    <div class="book_div">
+        <h2 class="book-style">Popular Book</h2>
+        <div class="books-template">
+            <div class="books">
+
+            {% for index, row in recommendindex[0].iloc[:20].iterrows() %}
+                <a class="book" href="/book/{{ row['ISBN'] }}">
+                    <img src="{{ row['Coverimg'] }}" alt="Image">
+                    <h2 class="title">{{ row['Title'] }}</h2>
+                    <p class="author">{{ row['Author'] }}</p>
+                </a>
+            {% endfor %}
+            </div>
+        </div>
+    </div>  
+    
+    <div class="book_div">
+        <h2 class="book-style">Newly Released Books</h2>
+        <div class="books-template">
+            <div class="books">
+
+                {% for index, row in recommendindex[1].iloc[:20].iterrows() %}
+                <a class="book" href="/book/{{ row['ISBN'] }}">
+                    <img src="{{ row['Coverimg'] }}" alt="Image">
+                    <h2 class="title">{{ row['Title'] }}</h2>
+                    <p class="author">{{ row['Author'] }}</p>
+                    <p class="year">{{ row['Release_year'] }}</p>
+                </a>
+            {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+    <div class="book_div">
+        <h2 class="book-style">Your Top Genres</h2>
+        <div class="books-template">
+            <div class="books">
+            {% for index, row in recommendindex[0].iloc[:20].iterrows() %}
+                <a class="book" href="/book/{{ row['ISBN'] }}">
+                    <img src="{{ row['Coverimg'] }}" alt="Image">
+                    <h2 class="title">{{ row['Title'] }}</h2>
+                    <p class="author">{{ row['Author'] }}</p>
+                </a>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="book_div">
+        <h2 class="book-style">See these</h2>
+        <div class="books-template">
+            <div class="books">
+
+            {% for index, row in recommendindex[3].iloc[:20].iterrows() %}
+                <a class="book" href="/book/{{ row['ISBN'] }}">
+                    <img src="{{ row['Coverimg'] }}" alt="Image">
+                    <h2 class="title">{{ row['Title'] }}</h2>
+                    <p class="author">{{ row['Author'] }}</p>
+                </a>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock body %}

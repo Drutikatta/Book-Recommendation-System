@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/book.css') }}">
+{% endblock css %}
+
+{% block body %}
+    <div class="book">
+        <div class="book-rate">
+            <img src="{{ book.Coverimg}}" alt="" class="book-img">
+            <button class="buy" href="">Buy Now</button>
+
+            <button class="add">Add to Library <span><i class="fa-solid fa-angle-down"></i></span></button>
+            <form class="reading" action="/book/book.ISBN" method="POST">
+                <label for="readlater">Read Later</label>
+                <input type="radio" name="readlater" id="">
+                <label for="current">Currently Reading</label>
+                <input type="radio" name="current" id="">
+                <label for="read">Completed</label>
+                <input type="radio" name="read" id="">
+            </form>
+        </div>
+        <div class="book-info">
+            <div class="book-data">
+                <h2 class="title">{{ book.Title}}</h2>
+                <p class="author">{{ book.Author}}</p>
+                <p class="rating"><span>Rating:</span> &nbsp;
+                    {{book.Average_rating}}
+                </p>
+                <p class="genre">Genre <span class="book-genre">Fiction</span></p>
+            </div>
+            <div class="desc">
+                <h2>Description</h2>
+                <p class="description">{{ book.Description }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="review-session">
+        <h2 class="review-head">Book Review</h2>
+        <div class="review">
+            <div class="user-review">
+                <h2 class="user-review-heading">Add Your Review</h2>
+                <div class="star">
+                    <span>Rate Now</span>`  ` 
+                </div>
+                <textarea name="" id=""  rows="7" class="addreview" placeholder="What Do Your Think Of the Book ?"></textarea>
+                <button class="reviewbtn">Post Review</button>
+            </div>
+            <div class="other-user-review">
+                <div class="other-review">
+                    <div class="profile">
+                        <p class="username">Pratik Bhuvad</p>
+                        <img src="harry.png" alt="" class="profile-img">
+                    </div>
+                    <div class="person-review">
+                        <div class="star">  
+                        </div>
+                        <p class="reviewtext">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, aliquid deleniti? Placeat nesciunt necessitatibus explicabo, pariatur, recusandae vel dolores distinctio, voluptatem dignissimos quisquam quae odio eius doloremque adipisci quod iusto!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="similarbooks">
+        <h1 class="similarbookshead">Similar Book To Look Out For</h1>
+        <div class="books">
+            {% for index, row in books.iloc[1:40].iterrows() %}
+                <a class="similar-book" href="/book/{{ row['ISBN'] }}">
+                    <img src="{{ row['Coverimg']}}" alt="Image" class="similar-book-img">
+                    <h2 class="similar-book-author">{{ row['Title']}}</h2>
+                    <p class="similar-book-author">{{ row['Author'] }}</p>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock body %}

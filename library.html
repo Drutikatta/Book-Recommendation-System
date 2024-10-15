@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+
+{% block title %}BookisLife - Library{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/library.css') }}">
+{% endblock css %}
+
+{% block body %}
+    <div class="space"></div>
+    <div class="book_div">
+        <h2 class="book-style">Read Later</h2>
+        <div class="books-template">
+            <div class="books">
+
+            <a class="book" href='/book'>
+                    <img src="{{url_for('static',filename='harry.png')}}" alt="Image">
+                    <h2 class="title">Harry Potter and the Dealthy Hallows</h2>
+                    <p class="author">J.K. Rowling</p>
+                </a>
+            <a class="book" href='/book'>
+                    <img src="{{url_for('static',filename='harry.png')}}" alt="Image">
+                    <h2 class="title">Harry Potter and the Dealthy Hallows</h2>
+                    <p class="author">J.K. Rowling</p>
+                </a>
+            <a class="book" href='/book'>
+                    <img src="../../images/cover.png" alt="Image">
+                    <h2 class="title">Harry Potter and the Dealthy Hallows</h2>
+                    <p class="author">J.K. Rowling</p>
+                </a>
+            <a class="book" href='/book'>
+                    <img src="../../images/cover.png" alt="Image">
+                    <h2 class="title">Harry Potter and the Dealthy Hallows</h2>
+                    <p class="author">J.K. Rowling</p>
+                </a>
+            <a class="book" href='/book'>
+                    <img src="../../images/cover.png" alt="Image">
+                    <h2 class="title">Harry Potter and the Dealthy Hallows</h2>
+                    <p class="author">J.K. Rowling</p>
+                </a>
+                
+            </div>
+            <button class="vm">More<span><i class="fa-solid fa-arrow-right fa-2x"></i></span></button>
+        </div>
+    </div>
+    <div class="book_div">
+        <h2 class="book-style">Currently Reading</h2>
+        <div class="books-template">
+            <div class="books">
+
+            <a class="book" href='/book'>
+                    <img src="{{url_for('static',filename='harry.png')}}" alt="Image">
+                    <h2 class="title">Harry Potter and the Dealthy Hallows</h2>
+                    <p class="author">J.K. Rowling</p>
+                </a>
+            <a class="book" href='/book'>
+                    <img src="{{url_for('static',filename='harry.png')}}" alt="Image">
+                    <h2 class="title">Harry Potter and the Dealthy Hallows</h2>
+                    <p class="author">J.K. Rowling</p>
+                </a>
+            <a class="book" href='/book'>
+                    <img src="../../images/cover.png" alt="Image">
+                    <h2 class="title">Harry Potter and the Dealthy Hallows</h2>
+                    <p class="author">J.K. Rowling</p>
+                </a>
+            <a class="book" href='/book'>
+                    <img src="../../images/cover.png" alt="Image">
+                    <h2 class="title">Harry Potter and the Dealthy Hallows</h2>
+                    <p class="author">J.K. Rowling</p>
+                </a>
+            <a class="book" href='/book'>
+                    <img src="../../images/cover.png" alt="Image">
+                    <h2 class="title">Harry Potter and the Dealthy Hallows</h2>
+                    <p class="author">J.K. Rowling</p>
+                </a>
+                
+            </div>
+            <button class="vm">More<span><i class="fa-solid fa-arrow-right fa-2x"></i></span></button>
+        </div>
+    </div>
+
+<div class="book_div">
+    <h2 class="book-style">Completed</h2>
+    <div class="books-template">
+        <div class="books">
+
+        <a class="book" href='/book'>
+                <img src="{{url_for('static',filename='harry.png')}}" alt="Image">
+                <h2 class="title">Harry Potter and the Dealthy Hallows</h2>
+                <p class="author">J.K. Rowling</p>
+            </a>
+        <a class="book" href='/book'>
+                <img src="{{url_for('static',filename='harry.png')}}" alt="Image">
+                <h2 class="title">Harry Potter and the Dealthy Hallows</h2>
+                <p class="author">J.K. Rowling</p>
+            </a>
+        <a class="book" href='/book'>
+                <img src="../../images/cover.png" alt="Image">
+                <h2 class="title">Harry Potter and the Dealthy Hallows</h2>
+                <p class="author">J.K. Rowling</p>
+            </a>
+        <a class="book" href='/book'>
+                <img src="../../images/cover.png" alt="Image">
+                <h2 class="title">Harry Potter and the Dealthy Hallows</h2>
+                <p class="author">J.K. Rowling</p>
+            </a>
+        <a class="book" href='/book'>
+                <img src="../../images/cover.png" alt="Image">
+                <h2 class="title">Harry Potter and the Dealthy Hallows</h2>
+                <p class="author">J.K. Rowling</p>
+            </a>
+            
+        </div>
+        <button class="vm">More<span><i class="fa-solid fa-arrow-right fa-2x"></i></span></button>
+    </div>
+</div>
+
+
+{% endblock body %}

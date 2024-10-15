@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recommend.css') }}">
+{% endblock css %}
+
+{% block body %}
+<div class="book-div">
+    <div class="books">
+        {% for index, row in book.iloc[:40].iterrows() %}
+            <a class="book" href="/book/{{ row['ISBN'] }}">
+                <img src="{{ row['Coverimg'] }}" alt="Image">
+                <h2 class="title">{{ row['Title'] }}</h2>
+                <p class="author">{{ row['Author'] }}</p>
+                <p class="author">{{ row['Genre'] }}</p>
+            </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock body %}

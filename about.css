@@ -1,0 +1,69 @@
+.space{
+    height: 14vh;
+}
+.bil{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 120px;
+    color: #FDCA7E;
+    cursor: pointer;
+}
+.bil p{
+    font-size: 40px;
+}
+.br{
+    margin-left: 740px;
+    font-size: 57px;
+}
+
+.imuab{
+    width: 733px;
+    height: 458px;
+    padding-left: 655px;
+}
+
+
+.para{
+    margin-left: 661px;
+    font-size: 25px;
+    list-style-type: square;
+}
+.para li{
+    font-size: 29px;
+}
+
+.outer{
+    background-color: #C9ADA7;
+    width: 100%;
+    height: 500px;
+}
+
+.fea{
+    line-height: 60px;
+    margin-top: 300px;
+    margin-left: 300px;
+}
+
+.fea-in{
+     margin-left: 300px;
+}
+
+.exp{
+    line-height: 60px;
+    margin-top: -126px;
+    margin-left: 699px;
+}
+
+.exp-in{
+     margin-left: 700px;
+}
+.con{
+    margin-top: -175px;
+    margin-left: 1050px;
+    line-height: 60px;
+}
+.social{
+    margin-top: -74px;
+    margin-left: 1039px
+}

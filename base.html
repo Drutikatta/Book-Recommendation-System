@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="static\images\logo.png" type="image/x-icon">
+    <title>{% block title %}BookisLife - Book Recommendations for Free{% endblock title %}</title>
+    {% block css %}
+
+    {% endblock css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="company-name"  href = "/" >
+            <img src="static\images\logo.png" alt="" class="logo">
+            <h1 class="BIL">BookisLife</h1>
+         </a>
+        <div class="pages">
+            <ul class="page-links">
+                <li><a href="/" class="page">Home</a></li>
+                <li><a href="/recommend" class="page">Recommendes</a></li>
+                <li><a href="" class="page" id="browse" >Browse <span><i class="fa-solid fa-angle-down"></i></span></a></li>
+                <form action="/search" method="POST" id="searchinput">
+                    <input type="search" name="searchbar" id="searchbar" placeholder="search" onkeypress="return handleKeyPress(event)">
+                </form>
+                <li><a href="/library" class="page">Library</a></li>
+                <li><a href="/about" class="page">AboutUs</a></li>
+            </ul>
+        </div>
+        <a class="search-login" >
+            <i class="fa-solid fa-user fa-2x" id="userlogin" onclick="myFunction()"></i>
+        </a>
+    </nav>
+    <div class="category">
+        <h1 class="cat">Genres of the Books</h1>
+        <div class="book-genre">
+                <a class="books-cat" href="/cat?value=Fiction">Fiction</a>
+                <a class="books-cat" href="/cat?value=Non-Fiction">Non-fiction</a>
+                <a class="books-cat" href="/cat?value=Mystery">Mystery</a>
+                <a class="books-cat" href="/cat?value+Romance">Romance</a>
+                <a class="books-cat" href="/cat?value=Biography">Biography</a>
+                <a class="books-cat" href="/cat?value=History">History</a>
+                <a class="books-cat" href="/cat?value=Fantasy">Fantasy</a>
+                <a class="books-cat" href="/cat?value=Horror">Horror</a>
+                <a class="books-cat" href="/cat?value=Poetry">Poetry</a>
+                <a class="books-cat" href="/cat?value=Drama">Drama</a>
+                <a class="books-cat" href="/cat?value=Comedy">Comedy</a>
+                <a class="books-cat" href="/cat?value=Science">Science</a>
+                <a class="books-cat" href="/cat?value=Comic">Graphic novels</a>         
+        </div>
+    </div>
+
+        <div id="myDropdown" class="dropdown-content">
+            <a href="/profile">Profile</a>
+            <a href="/sign">Sign-Up</a>
+            <a href="/login">Login</a>
+            <a href="#">Library</a>
+            <a href="#">Log out</a>
+        </div>
+
+    {% block body %}
+    
+    {% endblock body %}
+</body>
+<script>
+    window.onbeforeunload = null;
+</script>
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+<script src="{{ url_for('static', filename='js/base.js') }}"></script>
+<script src="https://kit.fontawesome.com/479704ac04.js" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}BookisLife - Recommendations{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/recommend.css') }}">
+{% endblock css %}
+
+{% block body %}
+   <div class="book-div">
+    <h1 class="bookheading">Books Recommended For You: </h1>
+    <div class="books" >
+        {% for index, row in book.iloc[:30].iterrows() %}
+            <a class="book" href="/book/{{ row['ISBN'] }}">
+                <img src="{{ row['Coverimg'] }}" alt="Image">
+                <h2 class="title">{{ row['Title'] }}</h2>
+                <p class="author">{{ row['Author'] }}</p>
+                <p class="author">{{ row['Genre'] }}</p>
+            </a>
+        {% endfor %}
+    </div>
+   </div>
+
+{% endblock body %}
+

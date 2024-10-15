@@ -1,0 +1,123 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/cate.css')}}">
+</head>
+<div class="wrapper">
+    <div class="title">Select Your Favorite Genre</div>
+</div>
+<form action="{{url_for('save')}}" class="container" method="POST">
+    <div class="contain">
+        <label class="option_item">
+            <input type="checkbox" name="checkbox" class="checkbox" value="Sports">
+            <div class="option_inner">
+                <div class="tickmark"></div>
+                <div class="sports"></div>
+            </div>
+        </label>
+        <label class="option_item">
+            <input type="checkbox" name="checkbox" class="checkbox" value="Non-Fiction">
+            <div class="option_inner">
+                <div class="tickmark"></div>
+                <div class="nonfic"></div>
+            </div>
+        </label>
+        <label class="option_item">
+            <input type="checkbox" name="checkbox" class="checkbox" value="Fiction">
+            <div class="option_inner">
+                <div class="tickmark"></div>
+                <div class="fiction"></div>
+            </div>
+        </label>
+        <label class="option_item">
+            <input type="checkbox" name="checkbox" class="checkbox" value="History">
+            <div class="option_inner">
+                <div class="tickmark"></div>
+                <div class="history"></div>
+            </div>
+        </label>
+        <label class="option_item">
+            <input type="checkbox" name="checkbox" class="checkbox" value="Biography">
+            <div class="option_inner">
+                <div class="tickmark"></div>
+                <div class="bio"></div>
+            </div>
+        </label>
+        <label class="option_item">
+            <input type="checkbox" name="checkbox" class="checkbox" value="Philosophy">
+            <div class="option_inner">
+                <div class="tickmark"></div>
+                <div class="phil"></div>
+            </div>
+        </label>
+        <label class="option_item">
+            <input type="checkbox" name="checkbox" class="checkbox" value="selfhelp">
+            <div class="option_inner">
+                <div class="tickmark"></div>
+                <div class="self"></div>
+            </div>
+        </label>
+        <label class="option_item">
+            <input type="checkbox" name="checkbox" class="checkbox" value="Drame">
+            <div class="option_inner">
+                <div class="tickmark"></div>
+                <div class="drama"></div>
+            </div>
+        </label>
+        <label class="option_item">
+            <input type="checkbox" name="checkbox" class="checkbox" value="Religion">
+            <div class="option_inner">
+                <div class="tickmark"></div>
+                <div class="relig"></div>
+            </div>
+        </label>
+        <label class="option_item">
+            <input type="checkbox" name="checkbox" class="checkbox" value="Science">
+            <div class="option_inner">
+                <div class="tickmark"></div>
+                <div class="sci"></div>
+            </div>
+        </label>
+        <label class="option_item">
+            <input type="checkbox" name="checkbox" class="checkbox" value="Mystry">
+            <div class="option_inner">
+                <div class="tickmark"></div>
+                <div class="mist"></div>
+
+            </div>
+        </label>
+        <label class="option_item">
+            <input type="checkbox" name="checkbox" class="checkbox" value="Travel">
+            <div class="option_inner">
+                <div class="tickmark"></div>
+                <div class="trav"></div>
+            </div>
+        </label>
+        <label class="option_item">
+            <input type="checkbox" name="checkbox" class="checkbox" value="music">
+            <div class="option_inner">
+                <div class="tickmark"></div>
+                <div class="music"></div>
+            </div>
+        </label>
+        <label class="option_item">
+            <input type="checkbox" name="checkbox" class="checkbox" value="comedy">
+            <div class="option_inner">
+                <div class="tickmark"></div>
+                <div class="com"></div>
+            </div>
+        </label>
+        <label class="option_item">
+            <input type="checkbox" name="checkbox" class="checkbox" value="horror">
+            <div class="option_inner">
+                <div class="tickmark"></div>
+                <div class="horr"></div>
+            </div>
+        </label>
+    </div>
+    <div class="btn">
+        <button type="submit" class="finish">Finish</button>
+    </div>
+</form>
+
+</html>

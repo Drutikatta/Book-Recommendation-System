@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+}
+body{
+    background: linear-gradient(213.3deg, #464A68 48.99%, #C9ADA7 96.27%);
+}
+.wrapper{
+    width: 99vw;
+    height: 13vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: #fff;
+}
+.container{
+    margin-left: 7%;
+    width: 90%;
+    padding: 3%;
+    padding-top: 0;
+}
+.contain{
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    row-gap: 5%;
+}
+.container .option_item{
+    display: block;
+    position: relative;
+    width: 170px;
+    height: 175px;
+}
+.option_item  .option_inner{
+    width: 145%;
+    height: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 6px solid black transparent;
+    position: relative;
+}
+.option_item .checkbox{
+position: absolute;
+top: 10px;
+right: -65px;
+opacity: 0;
+ z-index: 1;
+}
+.option_item .checkbox:checked ~ .option_inner{
+    border: 6px solid red;
+}
+.option_item .option_inner .tickemark{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-color: transparent red red transparent;
+}
+.option_item .option_inner .sports{
+/* background-image: url(SPOR.jpg); */
+background-image: url(../images/SPOR.jpg);
+width: 100%;
+height: 100%;
+background-size:contain     ;
+}
+.option_item .option_inner .nonfic{
+background-image: url(../images/NFIC.jpg);
+width: 100%;
+height: 100%;
+background-size:100%;
+}
+.option_item .option_inner .fiction{
+background-image: url(../images/FIC.jpg);
+width: 100%;
+height: 100%;
+background-size:100%;
+}
+.option_item .option_inner .history{
+background-image: url(../images/HISFOC.jpg);
+width: 100%;
+height: 100%;
+background-size:100%;
+}
+.option_item .option_inner .bio{
+background-image: url(../images/BIO.jpg);
+width: 100%;
+height: 100%;
+background-size:100%;
+}
+.option_item .option_inner .phil{
+background-image: url(../images/phi.jpg);
+width: 100%;
+height: 100%;
+background-size:100%;
+}
+.option_item .option_inner .self{
+background-image: url(../images/SCLF.jpg);
+width: 100%;
+height: 100%;
+background-size:100%;
+}
+.option_item .option_inner .drama{
+background-image: url(../images/dra.jpg);
+width: 100%;
+height: 100%;
+background-size:100%;
+}
+.option_item .option_inner .relig{
+background-image: url(../images/REL.jpg);
+width: 100%;
+height: 100%;
+background-size:100%;
+}
+.option_item .option_inner .sci{
+background-image: url(../images/sci.jpg);
+width: 100%;
+height: 100%;
+background-size:100%;
+}
+.option_item .option_inner .mist{
+background-image: url(../images/mis.jpg);
+width: 100%;
+height: 100%;
+background-size:100%;
+}
+.option_item .option_inner .trav{
+background-image: url(../images/TREL.jpg);
+width: 100%;
+height: 100%;
+background-size:100%;
+}
+.option_item .option_inner .music{
+background-image: url(../images/MUS.jpg);
+width: 100%;
+height: 100%;
+background-size:100%;
+}
+.option_item .option_inner .horr{
+background-image: url(../images/THORR.jpg);
+width: 100%;
+ height: 100%;
+background-size:100%;
+}
+.option_item .option_inner .com{
+background-image: url(../images/COMD.jpg);
+width: 100%;
+height: 100%;
+background-size:100%;
+}
+.option_item .option_inner .tickmark{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border: 20px solid;
+    border-color: red transparent transparent red;
+    display: none;
+
+}
+.option_item .option_inner .tickmark:before{
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -16px;
+    width: 15px;
+    height: 5px;
+    border: 3px solid red;
+    border-color: transparent transparent #fff #fff;
+    transform: rotate(-45deg); 
+} 
+.option_item  .checkbox:checked ~ .option_inner .tickmark{
+    display: block;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.finish{
+    text-decoration: none;
+    margin-top: 2.5%;
+    padding: 1% 134px;
+    font-weight: bold;
+    font-size: 2em;
+    border-radius: 50px;
+    cursor: pointer;
+    display: block;
+    color: black;
+    border: 1px solid black;
+    background: white;
+}
