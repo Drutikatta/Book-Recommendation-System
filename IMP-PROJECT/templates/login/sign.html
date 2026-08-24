@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookisLife - Sign-Up</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/sign.css')}}">
+</head>
+<body>
+    <form action="{{ url_for('sign') }}" class="sign-up" method="POST" id="user-form" onsubmit="return validate()" name="sign-form">
+        <div class="company-name">
+            <img src="static\images\logo.png" alt="" class="logo">
+            <h1><p>BookisLife</p></h1>
+         </div>
+        <h1 class="head">Create Account</h1>
+        <div class="sign-div" id="name">
+            <label for="name">Name</label>
+            <input type="text" name="name" required>
+            <span class="error"></span>
+        </div>
+        <div class="sign-div" id="username">
+            <label for="username">Username</label>
+            <input type="text" name="username" required>
+            <span class="error"></span>
+        </div>
+        <div class="sign-div" id="email">
+            <label for="email">Email</label>
+            <input type="email" name="email" required>
+            <span class="error"></span>
+        </div>
+        <div class="sign-div" id="password">
+            <label for="pass1">Password</label>
+            <input type="password" name="pass1" required>
+            <span class="error"></span>
+        </div>
+        <div class="sign-div" id="password1">
+            <label for="pass2">Confirm Password</label>
+            <input type="password" name="pass2" required>
+            <span class="error"></span>
+        </div>
+        <div class="btn">
+            <button class="submit">Next &nbsp;<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        <a class="close" href="/">
+            <i class="fa-solid fa-arrow-left fa-2x"></i>
+        </a>
+    </form>
+</body>
+<script src="{{url_for('static',filename='js/sign.js')}}"></script>
+<script src="https://kit.fontawesome.com/479704ac04.js" crossorigin="anonymous"></script>
+</html>

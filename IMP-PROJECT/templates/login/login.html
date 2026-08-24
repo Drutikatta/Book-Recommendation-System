@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+        <form action="{{url_for('login')}}" class="login-form" method="POST">
+            <div class="company-name">
+                <img src="static\images\logo.png" alt="" class="logo">
+                <h1><p>BookisLife</p></h1>
+             </div>
+            <h1 class="login-head">Login</h1>
+            <div class="login-div">
+                <label for="username" style="font-size: 27px;">Username</label>
+                <input type="text" name="username">    
+            </div>
+            <div class="login-div">
+                <label for="password" style="font-size: 27px;">Password</label>
+                <input type="password" name="password"> 
+                <a href="">Forgot Password?</a>   
+            </div>
+            <button type="submit" class="submit" value="Login">Login</button>
+            <div class="sign">
+                <span>Not a Member? &nbsp; </span>
+                <a href="/sign">Sign-Up now</a>
+            </div>
+            <a class="close" href="/">
+                <i class="fa-solid fa-arrow-left fa-2x"></i>
+            </a>
+        </form>
+</body>
+<script src="https://kit.fontawesome.com/479704ac04.js" crossorigin="anonymous"></script>
+</html>

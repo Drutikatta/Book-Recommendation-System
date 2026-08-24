@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}BookisLife - About Us{% endblock title %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock css %}
+
+{% block body %}
+<div>
+    <div class="space"></div>
+    <div>
+        <a class="bil" href="/">
+            <img src="static\images\logo.png" alt="" class="logo">
+            <p>BookisLife</p>
+        </a>
+
+        <h1 class="br">Book recommendation  </h1>
+        <img class="imuab" src="https://scontent.fbom26-1.fna.fbcdn.net/v/t1.6435-9/94427008_10158100313042170_8129736096138395648_n.png?stp=dst-png_s320x320&_nc_cat=103&ccb=1-7&_nc_sid=8024bb&_nc_ohc=HLIjZOqMINwAX_BGdMd&_nc_ht=scontent.fbom26-1.fna&oh=00_AfDYSO_BTZtjxg4YV00Clpvej18kKv5nkC19vIasxgyydw&oe=644D5D20">
+        
+            <ul class="para"><b>
+                <li>See what books your friends are reading.</li>
+            <li>Track the books you're reading, have read, and want to read.</li>
+            <li>Check out your personalized book recommendations.</li>
+            <li>Check out your personalized book recommendations. <br>Our recommendation engine analyzes 25,000 data points <br>to give suggestions tailored to your literary tastes.</li>
+            </ul></b>
+            
+    </div>
+    <div class="outer">
+        
+            <h1 class="fea" >Features</h1>
+            <p class="fea-in">Recommendes</p>
+            <p class="fea-in" >Library</p>
+            <p class="fea-in">Browse</p>
+            <h1 class="exp">Explore</h1>
+            <p class="exp-in">History</p>
+            <p class="exp-in">Fiction</p>
+            <p class="exp-in">Non Fiction</p>
+            <p class="exp-in">Horror</p>
+            <p class="exp-in">Thriller</p>
+       
+
+            <h1 class="con">Connect</h1>
+            <br><br><br>
+            <div class="social"><i class="fa-brands fa-instagram fa-lg" style="color: #e826d8;"></i><br>
+            <i class="fa-brands fa-facebook fa-lg" style="color: #538ae9;"></i><br>   
+            <i class="fa-brands fa-square-twitter fa-lg" style="color: #2d75f0;"></i>
+        </div>
+
+    
+    </div>
+</div>
+{% endblock body %}
